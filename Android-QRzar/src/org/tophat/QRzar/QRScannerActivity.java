@@ -3,8 +3,8 @@ package org.tophat.QRzar;
 import android.app.Activity;
 import android.os.Bundle;
 
-public class AndroidQRzarActivity extends Activity {
-    /** Called when the app is first started. */
+public class QRScannerActivity extends Activity{
+	/*Handle scanning a QR code. */
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);

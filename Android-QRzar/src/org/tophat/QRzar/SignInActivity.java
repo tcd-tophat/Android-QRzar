@@ -3,8 +3,9 @@ package org.tophat.QRzar;
 import android.app.Activity;
 import android.os.Bundle;
 
-public class AndroidQRzarActivity extends Activity {
-    /** Called when the app is first started. */
+/* Handle all signing in work */
+public class SignInActivity extends Activity {
+    /** Called when the activity is first created. */
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
