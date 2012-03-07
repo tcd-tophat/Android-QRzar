@@ -15,4 +15,9 @@ public class MainScreenActivity extends Activity{
     public void onStart(){
     	super.onStart();
     }
+    
+    @Override
+    public void onResume(){
+    	super.onResume();
+    }
 }

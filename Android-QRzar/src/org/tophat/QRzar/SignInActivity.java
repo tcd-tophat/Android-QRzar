@@ -16,4 +16,16 @@ public class SignInActivity extends Activity {
     public void onStart(){
     	super.onStart();
     }
+    
+    @Override
+    public void onResume(){
+    	super.onResume();
+    	if(signedIn()){
+    		Intent signInIntent = new Intent(this, MainScreenActivity.class);
+    		startActivity(signInIntent);
+    	}
+    	else{
+    		//Handle login
+    	}
+    }
 }
