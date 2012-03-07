@@ -1,11 +1,14 @@
 package org.tophat.QRzar;
 
 import android.app.Activity;
+import android.content.Intent;
 import android.os.Bundle;
 
 /* Handle all signing in work */
 public class SignInActivity extends Activity {
-    /** Called when the activity is first created. */
+	
+	private int authToken = 0;
+	
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -20,12 +23,30 @@ public class SignInActivity extends Activity {
     @Override
     public void onResume(){
     	super.onResume();
-    	if(signedIn()){
+    	if(isSignedIn()){		//If the player already has an auth token
     		Intent signInIntent = new Intent(this, MainScreenActivity.class);
     		startActivity(signInIntent);
     	}
     	else{
-    		//Handle login
+    		if(signIn()){
+    			//Player has been signed in
+    		}
+    		else{
+    			//Handle login errors
+    		}
     	}
+    }
+    
+    public boolean isSignedIn(){
+    	if(authToken != 0){
+    		return true;
+    	}
+    	return false;
+    }
+    
+    public boolean signIn(){
+    /*Sign in the player and set suthToken */
+    	authToken = 1;
+    	return true;
     }
 }
