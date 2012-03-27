@@ -41,7 +41,7 @@ public class MainScreenActivity extends Activity{
     	System.out.println("Join Game");
     	
 		Intent intent = new Intent("com.google.zxing.client.android.SCAN");
-		intent.putExtra("SCAN_MODE", "PRODUCT_MODE");
+		intent.putExtra("SCAN_MODE", "QR_CODE_MODE");
 		startActivityForResult(intent, SCAN_RESULT);
 		setContentView(R.layout.loadingscreen);
     }
