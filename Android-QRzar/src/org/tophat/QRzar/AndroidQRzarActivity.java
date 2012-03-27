@@ -9,18 +9,22 @@ public class AndroidQRzarActivity extends Activity {
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.main);
+        setContentView(R.layout.loadingscreen);
     }
     
     @Override
     public void onStart(){
     	super.onStart();
+    	
+    	Intent signInIntent = new Intent(this, MainScreenActivity.class);
+    	startActivity(signInIntent);
     }
     
     @Override
     public void onResume(){
     	super.onResume();
-    	Intent signInIntent = new Intent(this, SignInActivity.class);
+    	
+    	Intent signInIntent = new Intent(this, MainScreenActivity.class);
     	startActivity(signInIntent);
     }
 }
