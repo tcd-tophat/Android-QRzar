@@ -38,11 +38,14 @@ public final class R {
         public static final int viewfinder_mask=0x7f070015;
     }
     public static final class drawable {
-        public static final int ic_launcher=0x7f020000;
-        public static final int launcher_icon=0x7f020001;
-        public static final int loading=0x7f020002;
-        public static final int share_via_barcode=0x7f020003;
-        public static final int shopper_icon=0x7f020004;
+        public static final int a_placeholder=0x7f020000;
+        public static final int background_qrzar=0x7f020001;
+        public static final int ic_launcher=0x7f020002;
+        public static final int launcher_icon=0x7f020003;
+        public static final int loading=0x7f020004;
+        public static final int qrzar_logo=0x7f020005;
+        public static final int share_via_barcode=0x7f020006;
+        public static final int shopper_icon=0x7f020007;
     }
     public static final class id {
         /**  Messages IDs 
@@ -52,8 +55,8 @@ public final class R {
         public static final int barcode_image_view=0x7f08000f;
         public static final int bookmark_title=0x7f08000a;
         public static final int bookmark_url=0x7f08000b;
-        public static final int button1=0x7f080029;
-        public static final int button2=0x7f08002a;
+        public static final int button1=0x7f08002a;
+        public static final int button2=0x7f08002b;
         public static final int button3=0x7f08002c;
         public static final int contents_supplement_text_view=0x7f080019;
         public static final int contents_text_view=0x7f080018;
@@ -68,19 +71,19 @@ public final class R {
         public static final int help_contents=0x7f08001f;
         public static final int history_detail=0x7f080023;
         public static final int history_title=0x7f080022;
-        public static final int imageView1=0x7f080025;
+        public static final int imageView1=0x7f080026;
         public static final int image_view=0x7f08001e;
         public static final int launch_product_query=0x7f080004;
-        public static final int linearLayout1=0x7f08002b;
+        public static final int linearLayout1=0x7f080027;
         public static final int meta_text_view=0x7f080017;
         public static final int meta_text_view_label=0x7f080016;
         public static final int page_number_view=0x7f080030;
         public static final int preview_view=0x7f08000c;
-        public static final int progressBar1=0x7f080027;
+        public static final int progressBar1=0x7f080028;
         public static final int query_button=0x7f08002e;
         public static final int query_text_view=0x7f08002d;
         public static final int quit=0x7f080005;
-        public static final int relativeLayout1=0x7f080026;
+        public static final int relativeLayout1=0x7f080025;
         public static final int restart_preview=0x7f080006;
         public static final int result_button_view=0x7f08001a;
         public static final int result_list_view=0x7f08002f;
@@ -96,7 +99,7 @@ public final class R {
         public static final int shopper_button=0x7f08001b;
         public static final int snippet_view=0x7f080031;
         public static final int status_view=0x7f08001c;
-        public static final int textView1=0x7f080028;
+        public static final int textView1=0x7f080029;
         public static final int time_text_view=0x7f080015;
         public static final int time_text_view_label=0x7f080014;
         public static final int type_text_view=0x7f080013;

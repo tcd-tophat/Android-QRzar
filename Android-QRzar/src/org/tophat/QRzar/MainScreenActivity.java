@@ -14,6 +14,8 @@ public class MainScreenActivity extends Activity{
 	
 	public final static int SCAN_RESULT = 1;
 	
+	public final static int LOADING = 0x20;
+	
 	public static Context c;
 	
 	 /* Control the main screen of the app. */
@@ -23,6 +25,9 @@ public class MainScreenActivity extends Activity{
         setContentView(R.layout.mainscreen);
         
         c = this.getApplicationContext();
+        
+        Intent myIntent = new Intent(c, LoadingActivity.class);
+        startActivityForResult(myIntent, LOADING);
     }
     
     @Override
@@ -38,28 +43,34 @@ public class MainScreenActivity extends Activity{
     public void showRanks(View v)
     {
     	System.out.println("View v");
+    	
+    	showNotification("Pressed Show Rank");
     }
     
     public void showInfo(View v)
     {
     	System.out.println("Info v");
+    	showNotification("Pressed Info");
     }
     
     public void joinGame(View v)
     {
     	System.out.println("Join Game");
+    	showNotification("Pressed Join Game");
     	
 		Intent intent = new Intent("com.google.zxing.client.android.SCAN");
 		intent.putExtra("SCAN_MODE", "QR_CODE_MODE");
 		startActivityForResult(intent, SCAN_RESULT);
-		setContentView(R.layout.loadingscreen);
     }
     
     public void onActivityResult(int requestCode, int resultCode, Intent intent) {
-    	  if (intent != null) {
+    	  if (intent != null && requestCode != LOADING) {
     		  String response = intent.getStringExtra("SCAN_RESULT");
-    		  setContentView(R.layout.mainscreen);
     		  showNotification("data" + response );
+    	  }
+    	  else if( requestCode == LOADING)
+    	  {
+    		  // Done Loading
     	  }
     }
     
