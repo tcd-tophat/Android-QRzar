@@ -2,12 +2,13 @@
 <resources>
 
     <string name="hello">Hello World, AndroidQRzarActivity!</string>
-    <string name="app_name">Android-QRzar</string>
+    <string name="app_name">QRzar</string>
     <string name="facebook">Connect with Facebook</string>
     <string name="welcome">Welcome to QRzar</string>
     <string name="nofacebook">&quot;Don't have Facebook?&quot;</string>
     <string name="rank">Rank</string>
     <string name="join">Join</string>
     <string name="info">Info</string>
+    <string name="empty"></string>
 
 </resources>

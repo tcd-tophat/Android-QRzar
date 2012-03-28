@@ -27,6 +27,7 @@ public class MainScreenActivity extends Activity{
         c = this.getApplicationContext();
         
         Intent myIntent = new Intent(c, LoadingActivity.class);
+        
         startActivityForResult(myIntent, LOADING);
     }
     
