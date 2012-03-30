@@ -65,14 +65,24 @@ public class MainScreenActivity extends Activity{
     }
     
     public void onActivityResult(int requestCode, int resultCode, Intent intent) {
-    	  if (intent != null && requestCode != LOADING) {
-    		  String response = intent.getStringExtra("SCAN_RESULT");
-    		  showNotification("data" + response );
-    	  }
-    	  else if( requestCode == LOADING)
-    	  {
-    		  // Done Loading
-    	  }
+        if (intent != null && requestCode != LOADING) {
+    	    String response = intent.getStringExtra("SCAN_RESULT");
+    		showNotification("data" + response );
+            
+            String URL = "tophat.ie/"       //API URL
+            String responceGameId = parseGameId(responce);      //Get game id from QR responce
+            HttpClient httpclient = new DefaultHttpClient();
+            HttpResponse response = httpclient.execute(new HttpGet(URL + responceGameId));
+            StatusLine statusLine = response.getStatusLine();
+            if(statusLine.getStatusCode() == HttpStatus.SC_OK){
+                /* Add player to game
+                * Pull latest game state
+                */
+            }
+    	}
+    	else if(requestCode == LOADING){
+    		    // Done Loading
+    	}
     }
     
 	/**
