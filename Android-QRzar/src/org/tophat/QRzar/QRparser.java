@@ -1,3 +1,7 @@
+package org.tophat.QRzar;
+
+import java.Math;
+
 public class QRparser{
 
     private String data = "";
