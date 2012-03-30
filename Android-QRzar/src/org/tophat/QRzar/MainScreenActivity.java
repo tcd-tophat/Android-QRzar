@@ -78,6 +78,9 @@ public class MainScreenActivity extends Activity{
                 /* Add player to game
                 * Pull latest game state
                 */
+                ByteArrayOutputStream out = new ByteArrayOutputStream();
+                response.getEntity().writeTo(out);
+                out.close();
             }
     	}
     	else if(requestCode == LOADING){
