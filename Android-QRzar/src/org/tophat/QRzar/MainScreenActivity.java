@@ -69,19 +69,7 @@ public class MainScreenActivity extends Activity{
     	    String response = intent.getStringExtra("SCAN_RESULT");
     		showNotification("data" + response );
             
-            String URL = "tophat.ie/"       //API URL
-            String responceGameId = parseGameId(responce);      //Get game id from QR responce
-            HttpClient httpclient = new DefaultHttpClient();
-            HttpResponse response = httpclient.execute(new HttpGet(URL + responceGameId));
-            StatusLine statusLine = response.getStatusLine();
-            if(statusLine.getStatusCode() == HttpStatus.SC_OK){
-                /* Add player to game
-                * Pull latest game state
-                */
-                ByteArrayOutputStream out = new ByteArrayOutputStream();
-                response.getEntity().writeTo(out);
-                out.close();
-            }
+            String URL = "http://www.alpha.tophat.ie/"       //API URL
     	}
     	else if(requestCode == LOADING){
     		    // Done Loading
