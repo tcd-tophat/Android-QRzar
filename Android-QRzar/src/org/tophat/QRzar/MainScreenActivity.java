@@ -65,14 +65,15 @@ public class MainScreenActivity extends Activity{
     }
     
     public void onActivityResult(int requestCode, int resultCode, Intent intent) {
-    	  if (intent != null && requestCode != LOADING) {
-    		  String response = intent.getStringExtra("SCAN_RESULT");
-    		  showNotification("data" + response );
-    	  }
-    	  else if( requestCode == LOADING)
-    	  {
-    		  // Done Loading
-    	  }
+        if (intent != null && requestCode != LOADING) {
+    	    String response = intent.getStringExtra("SCAN_RESULT");
+    		showNotification("data" + response );
+            
+            String URL = "http://www.alpha.tophat.ie/"       //API URL
+    	}
+    	else if(requestCode == LOADING){
+    		    // Done Loading
+    	}
     }
     
 	/**
