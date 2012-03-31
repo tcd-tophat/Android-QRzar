@@ -1,5 +1,7 @@
 package org.tophat.QRzar;
 
+import org.tophat.QRzar.networking.TCPStream;
+
 import com.google.zxing.integration.android.IntentIntegrator;
 import com.google.zxing.integration.android.IntentResult;
 
@@ -59,7 +61,7 @@ public class MainScreenActivity extends Activity{
     	System.out.println("Join Game");
     	showNotification("Pressed Join Game");
     	
-		Intent intent = new Intent("com.google.zxing.client.android.SCAN");
+		Intent intent = new Intent("com.google.zxing.client.android.SCAN_QR");
 		intent.putExtra("SCAN_MODE", "QR_CODE_MODE");
 		startActivityForResult(intent, SCAN_RESULT);
     }
@@ -68,6 +70,16 @@ public class MainScreenActivity extends Activity{
     	  if (intent != null && requestCode != LOADING) {
     		  String response = intent.getStringExtra("SCAN_RESULT");
     		  showNotification("data" + response );
+    		  
+    		  TCPStream tcp = new TCPStream();
+    		  
+    		  try
+    		  {
+    			  tcp.connect();
+    		  } catch ( Exception e )
+    		  {
+    			  e.printStackTrace();
+    		  }
     	  }
     	  else if( requestCode == LOADING)
     	  {

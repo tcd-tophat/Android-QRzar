@@ -4,8 +4,8 @@
     android:layout_height="fill_parent"
     android:orientation="vertical" >
     <LinearLayout android:gravity="bottom" android:scaleType="fitXY" android:background="@drawable/mainmenu" android:id="@+id/linearLayout1" android:layout_height="wrap_content" android:layout_width="match_parent">
-        <Button android:layout_margin="10px" android:id="@+id/button2" android:onClick="joinGame" android:background="@drawable/join" android:text="@string/empty" android:layout_width="0dp" android:layout_weight="1" android:layout_height="wrap_content"></Button>
-        <Button android:layout_margin="10px" android:layout_height="wrap_content" android:id="@+id/button3" android:layout_width="0dp" android:onClick="showInfo" android:background="@drawable/info" android:layout_weight="1" android:text="@string/empty"></Button>
-        <Button android:layout_margin="10px" android:layout_height="wrap_content" android:id="@+id/button1" android:layout_width="0dp" android:onClick="showRanks" android:background="@drawable/rank" android:layout_weight="1" android:text="@string/empty"></Button>
+        <Button android:layout_margin="10px" android:onClick="joinGame" android:background="@drawable/join_button" android:text="@string/empty" android:layout_width="0dp" android:layout_weight="1" android:layout_height="wrap_content" android:id="@+id/join_button"></Button>
+        <Button android:layout_margin="10px" android:layout_height="wrap_content" android:layout_width="0dp" android:onClick="showInfo" android:background="@drawable/info_button" android:layout_weight="1" android:text="@string/empty" android:id="@+id/info_button"></Button>
+        <Button android:layout_margin="10px" android:layout_height="wrap_content" android:layout_width="0dp" android:onClick="showRanks" android:background="@drawable/rank_button" android:layout_weight="1" android:text="@string/empty" android:id="@+id/rank_button"></Button>
     </LinearLayout>
 </LinearLayout>
