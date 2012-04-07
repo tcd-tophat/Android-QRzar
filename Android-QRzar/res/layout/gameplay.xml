@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:orientation="vertical" >
+    <TextView android:id="@+id/textView1" android:layout_height="wrap_content" android:textAppearance="?android:attr/textAppearanceLarge" android:layout_width="wrap_content" android:text="@string/welcome"></TextView>
+    <TextView android:id="@+id/textView2" android:layout_height="wrap_content" android:textAppearance="?android:attr/textAppearanceLarge" android:layout_width="wrap_content" android:text="@string/connection_status"></TextView>
+    <TextView android:id="@+id/TextView03" android:layout_height="wrap_content" android:textAppearance="?android:attr/textAppearanceLarge" android:text="N/A" android:layout_width="wrap_content"></TextView>
+    <TextView android:id="@+id/TextView02" android:layout_height="wrap_content" android:textAppearance="?android:attr/textAppearanceLarge" android:text="@string/game_id" android:layout_width="wrap_content"></TextView>
+    <TextView android:layout_height="wrap_content" android:textAppearance="?android:attr/textAppearanceLarge" android:text="N/A" android:layout_width="wrap_content" android:id="@+id/game_id"></TextView>
+    <TextView android:id="@+id/TextView01" android:layout_height="wrap_content" android:textAppearance="?android:attr/textAppearanceLarge" android:layout_width="wrap_content" android:text="@string/player_id"></TextView>
+    <TextView android:layout_height="wrap_content" android:textAppearance="?android:attr/textAppearanceLarge" android:text="N/A" android:layout_width="wrap_content" android:id="@+id/playerId"></TextView>
+    <TextView android:id="@+id/TextView05" android:layout_height="wrap_content" android:textAppearance="?android:attr/textAppearanceLarge" android:layout_width="wrap_content" android:text="@string/team"></TextView>
+    <TextView android:layout_height="wrap_content" android:textAppearance="?android:attr/textAppearanceLarge" android:text="N/A" android:layout_width="wrap_content" android:id="@+id/player_team"></TextView>
+
+</LinearLayout>

@@ -9,45 +9,77 @@ public class QRparser
 {
 
     private String data = "";
+    
+    /**
+     * So that the team only needs to be extracted once in order to be used, it is saved in this variable after one
+     */
+    private String team;
+    
+    /**
+     * The game Id is saved in here after one in order to ensure that it does not have to be recalculated.
+     */
+    private Integer gameId;
+    
+    /**
+     * This playerId
+     */
+    private Integer playerId;
+    
+    private boolean valid;
 
     public QRparser(String QRinput)
     {
     	//Clone the string
-        data = new String ( QRinput);   
+        data = new String ( QRinput);  
+        
+        if ( data.length() != 6)
+        {
+        	this.valid = false;
+        }
+        else
+        {
+        	this.valid = true;
+        }
     }
 
     public String getTeam()
     {
-    	
-        if(data.charAt(0) == 'R')
-        {
-            return "red";
-        }
-        else if(data.charAt(0) == 'B')
-        {
-            return "blue";
-        }
-        else if(data.charAt(0) == 'G')
-        {
-            return "green";
-        }
-        else if(data.charAt(0) == 'Y')
-        {
-            return "yellow";
-        }
+    	if( team == null )
+    	{
+	        if(data.charAt(0) == 'R')
+	        {
+	            team = "red";
+	        }
+	        else if(data.charAt(0) == 'B')
+	        {
+	            team = "blue";
+	        }
+	        else if(data.charAt(0) == 'G')
+	        {
+	            team = "green";
+	        }
+	        else if(data.charAt(0) == 'Y')
+	        {
+	            team = "yellow";
+	        }
+    	}
         
-		return null;
+		return team;
     }
 
     public int getGameId()
     {
-        int res = 0;
-        res += (int)data.charAt(1);
-        res = res << (int) Math.pow( (double) 2, (double)8);
-        res += (int)data.charAt(2);
-        res = res << (int) Math.pow( (double)2, (double)8);
-        res += (int)data.charAt(3);
-        return res;
+    	if( gameId == null )
+    	{
+	        gameId = 0;
+	        gameId += (int)data.charAt(1);
+	        gameId = gameId << (int) Math.pow( (double) 2, (double)8);
+	        gameId += (int)data.charAt(2);
+	        gameId = gameId << (int) Math.pow( (double)2, (double)8);
+	        gameId += (int)data.charAt(3);
+    	}
+    	
+    	return (int)gameId;
     }
 
     public int getPlayerId()
@@ -57,5 +89,10 @@ public class QRparser
         res = res << (int)Math.pow((double)2, (double)8);
         res += (int)data.charAt(5);
         return res;
+    }
+    
+    public boolean isValid()
+    {
+    	return this.valid;
     }
 }

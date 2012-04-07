@@ -18,6 +18,8 @@ public class MainScreenActivity extends Activity{
 	
 	public final static int LOADING = 0x20;
 	
+	public static QRparser playerDetails;
+	
 	public static Context c;
 	
 	 /* Control the main screen of the app. */
@@ -25,6 +27,8 @@ public class MainScreenActivity extends Activity{
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.mainscreen);
+        
+        playerDetails = null;
         
         c = this.getApplicationContext();
         
@@ -69,16 +73,33 @@ public class MainScreenActivity extends Activity{
     public void onActivityResult(int requestCode, int resultCode, Intent intent) {
     	  if (intent != null && requestCode != LOADING) {
     		  String response = intent.getStringExtra("SCAN_RESULT");
-    		  showNotification("data" + response );
     		  
-    		  TCPStream tcp = new TCPStream();
+    		  QRparser qr = new QRparser(response);
     		  
-    		  try
+    		  if( qr.isValid() )
     		  {
-    			  tcp.connect();
-    		  } catch ( Exception e )
+	    		  showNotification("Team " + qr.getTeam() );
+	    		  showNotification("Game ID " + qr.getGameId() );
+	    		  showNotification("Player ID " + qr.getPlayerId() );
+	    		  
+	    		  playerDetails = qr;
+	    		  
+				  Intent myIntent = new Intent(c, PlayGame.class);
+				  startActivityForResult(myIntent, 8);
+				  
+				  //TCPStream tcp = new TCPStream();
+	    	        
+	    		  try
+	    		  {
+	    			  //tcp.connect();
+	    		  } catch ( Exception e )
+	    		  {
+	    			  e.printStackTrace();
+	    		  }
+    		  }
+    		  else
     		  {
-    			  e.printStackTrace();
+    			  showNotification("The Scanned QR Code was invalid.");
     		  }
     	  }
     	  else if( requestCode == LOADING)
