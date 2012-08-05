@@ -5,6 +5,5 @@
 	<classpathentry kind="src" path="src"/>
 	<classpathentry kind="src" path="gen"/>
 	<classpathentry kind="lib" path="/Users/Kevin/Documents/zxing/core/core.jar"/>
-	<classpathentry kind="src" path="ZXing_src"/>
 	<classpathentry kind="output" path="bin/classes"/>
 </classpath>

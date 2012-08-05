@@ -2,8 +2,17 @@ package org.tophat.QRzar;
 
 /**
  * Parses the team join QR code in order to the user to join a specific game.
- * @author Kevin
- *
+ * 
+ * QR Code Format:
+ * 
+ * _________________________________________________
+ * |   0   |   1   |   2   |   3   |   4   |   5   |
+ * |________________________________________________
+ * | Color | <------- Game ------> | <--Player---> |
+ * |________________________________________________
+ * 
+ * 
+ * @author Kevins
  */
 public class QRparser
 {
@@ -32,7 +41,11 @@ public class QRparser
     	//Clone the string
         data = new String ( QRinput);  
         
-        if ( data.length() != 6)
+        //Ensure standard format
+        data = data.toUpperCase();
+        
+        // Convert the team string
+        if ( data.length() != 6 )
         {
         	this.valid = false;
         }
@@ -42,6 +55,10 @@ public class QRparser
         }
     }
 
+    /**
+     * Gets the team from the given QRcode.
+     * @return
+     */
     public String getTeam()
     {
     	if( team == null )
@@ -67,6 +84,10 @@ public class QRparser
 		return team;
     }
 
+    /**
+     * Returns the Game ID from the given QRcode.
+     * @return
+     */
     public int getGameId()
     {
     	if( gameId == null )
@@ -82,15 +103,29 @@ public class QRparser
     	return (int)gameId;
     }
 
+    /**
+     * Calculates and returns the player ID which is retrieved from the given QRcode.
+     * @return Returns the ID of player in the given QRcode String
+     */
     public int getPlayerId()
     {
-        int res = 0;
-        res += (int)data.charAt(4);
-        res = res << (int)Math.pow((double)2, (double)8);
-        res += (int)data.charAt(5);
-        return res;
+    	if (playerId == null )
+    	{
+	        int res = 0;
+	        res += (int)data.charAt(4);
+	        res = res << (int)Math.pow((double)2, (double)8);
+	        res += (int)data.charAt(5);
+	        
+	        playerId = res;
+    	}
+    	
+        return playerId;
     }
     
+    /**
+     * Checks if the scanned QRcode is valid for the format required for the QRzar game
+     * @return True for a valid code and false for an invalid code
+     */
     public boolean isValid()
     {
     	return this.valid;
