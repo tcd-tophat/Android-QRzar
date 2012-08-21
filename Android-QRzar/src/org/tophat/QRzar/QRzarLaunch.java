@@ -1,15 +1,24 @@
 package org.tophat.QRzar;
 
+import org.tophat.android.networking.ApiCommunicator;
+
 import android.app.Activity;
 import android.content.Intent;
 import android.os.Bundle;
 
-public class AndroidQRzarActivity extends Activity {
+public class QRzarLaunch extends Activity {
+	
+	public static ApiCommunicator apic;
+	public static Constants constants;
+	
     /* Called when the app is first started. */
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.loadingscreen);
+        
+        constants = new Constants();
+        apic = new ApiCommunicator(constants);
     }
     
     @Override
