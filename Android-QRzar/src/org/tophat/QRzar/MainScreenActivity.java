@@ -4,12 +4,7 @@ package org.tophat.QRzar;
 import org.tophat.android.exceptions.Forbidden;
 import org.tophat.android.exceptions.HttpException;
 import org.tophat.android.exceptions.NoInternetConnection;
-import org.tophat.android.exceptions.NotFound;
-import org.tophat.android.exceptions.Unauthorised;
 import org.tophat.android.model.ApiTokenMapper;
-
-import com.google.zxing.integration.android.IntentIntegrator;
-import com.google.zxing.integration.android.IntentResult;
 
 import android.app.Activity;
 import android.app.ProgressDialog;
@@ -18,7 +13,6 @@ import android.content.Intent;
 import android.os.AsyncTask;
 import android.os.Bundle;
 import android.view.View;
-import android.widget.EditText;
 import android.widget.Toast;
 
 public class MainScreenActivity extends Activity{

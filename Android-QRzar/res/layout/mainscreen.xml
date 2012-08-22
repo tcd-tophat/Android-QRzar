@@ -7,7 +7,7 @@
     <FrameLayout 
         android:layout_width="match_parent"
         android:layout_height="0dp"
-        android:layout_weight="1.816">
+        android:layout_weight="1">
         <ImageView 
             android:contentDescription="@string/logo_description"
             android:src="@drawable/logo"
@@ -23,14 +23,15 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:scaleType="fitXY"
+        android:layout_marginBottom="10dp" 
     />
     <LinearLayout  
+        android:baselineAligned="false"
         android:id="@+id/linearLayout1" 
-        android:layout_height="0dp"
+        android:layout_height="wrap_content"
         android:layout_gravity="bottom"
         android:orientation="horizontal" 
-        android:layout_width="match_parent"
-        android:layout_weight="1">
+        android:layout_width="match_parent">
         
         <FrameLayout 
             android:layout_width="0dp"
@@ -44,10 +45,9 @@
             	android:layout_gravity="center">
             	
             	<Button 
-        	    	android:layout_margin="10dp" 
         	    	android:layout_height="wrap_content" 
         	    	android:layout_width="wrap_content" 
-        	    	android:onClick="showInfo" 
+        	    	android:onClick="showRanks" 
         	    	android:background="@drawable/rank_button" 
         	    	android:text="@string/empty" 
         	    	android:id="@+id/rank_button" 
@@ -58,10 +58,13 @@
                 	android:layout_height="wrap_content" >
                 	
                 	<TextView 
+                	    android:textColor="#aaa6b1"
+                	    android:layout_margin="5dp" 
                 		android:gravity="center"
                 		android:text="@string/rank" 
                 		android:layout_width="fill_parent"
                 		android:layout_height="wrap_content" 
+                		android:textSize="20dp"
                 	/>
                 	
             	</FrameLayout>
@@ -72,20 +75,20 @@
         	
         <FrameLayout 
             android:layout_width="0dp"
-            android:layout_weight="1"
+            android:layout_weight="1.4"
             android:layout_height="match_parent">
         	
-        	<LinearLayout 
+        	<LinearLayout
+        	    android:baselineAligned="false"
             	android:orientation="vertical"
             	android:layout_height="wrap_content"
             	android:layout_width="wrap_content"
             	android:layout_gravity="center">
             	
             	<Button 
-        	    	android:layout_margin="10dp" 
         	    	android:layout_height="wrap_content" 
         	    	android:layout_width="wrap_content" 
-        	    	android:onClick="showInfo" 
+        	    	android:onClick="joinGame" 
         	    	android:background="@drawable/join_button" 
         	    	android:text="@string/empty" 
         	    	android:id="@+id/join_button" 
@@ -96,10 +99,13 @@
                 	android:layout_height="wrap_content" >
                 	
                 	<TextView 
+                	    android:textColor="#aaa6b1"
+                	    android:layout_margin="5dp" 
                 		android:gravity="center"
                 		android:text="@string/play" 
                 		android:layout_width="fill_parent"
                 		android:layout_height="wrap_content" 
+                		android:textSize="20dp"
                 	/>
                 	
             	</FrameLayout>
@@ -112,14 +118,13 @@
             android:layout_weight="1"
             android:layout_height="match_parent">
         	
-        	<LinearLayout 
+        	<LinearLayout
             	android:orientation="vertical"
             	android:layout_height="wrap_content"
             	android:layout_width="wrap_content"
             	android:layout_gravity="center">
             	
             	<Button 
-        	    	android:layout_margin="10dp" 
         	    	android:layout_height="wrap_content" 
         	    	android:layout_width="wrap_content" 
         	    	android:onClick="showInfo" 
@@ -132,12 +137,14 @@
                 	android:layout_width="fill_parent"
                 	android:layout_height="wrap_content" >
                 	
-                	<TextView 
-                		android:gravity="center"
-                		android:text="@string/info" 
-                		android:layout_width="fill_parent"
-                		android:layout_height="wrap_content" 
-                	/>
+                	<TextView
+                	    android:layout_width="fill_parent"
+                	    android:layout_height="wrap_content"
+                	    android:layout_margin="5dp"
+                	    android:gravity="center"
+                	    android:text="@string/info"
+                	    android:textColor="#aaa6b1"
+                	    android:textSize="20dp" />
                 	
             	</FrameLayout>
             
