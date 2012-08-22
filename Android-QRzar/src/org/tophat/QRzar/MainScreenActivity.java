@@ -97,7 +97,7 @@ public class MainScreenActivity extends Activity{
 	    		  
 	    		  playerDetails = qr;
 	    		  
-				  Intent myIntent = new Intent(c, PlayGame.class);
+				  Intent myIntent = new Intent(c, CountDown.class);
 				  startActivityForResult(myIntent, 8);
 				  
 				  //TCPStream tcp = new TCPStream();
