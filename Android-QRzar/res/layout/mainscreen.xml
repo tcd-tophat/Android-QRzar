@@ -1,11 +1,148 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:layout_width="fill_parent"
-    android:layout_height="fill_parent"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/blue_gradient_background" 
     android:orientation="vertical" >
-    <LinearLayout android:gravity="bottom" android:scaleType="fitXY" android:background="@drawable/mainmenu" android:id="@+id/linearLayout1" android:layout_height="wrap_content" android:layout_width="match_parent">
-        <Button android:layout_margin="10px" android:onClick="joinGame" android:background="@drawable/join_button" android:text="@string/empty" android:layout_width="0dp" android:layout_weight="1" android:layout_height="wrap_content" android:id="@+id/join_button"></Button>
-        <Button android:layout_margin="10px" android:layout_height="wrap_content" android:layout_width="0dp" android:onClick="showInfo" android:background="@drawable/info_button" android:layout_weight="1" android:text="@string/empty" android:id="@+id/info_button"></Button>
-        <Button android:layout_margin="10px" android:layout_height="wrap_content" android:layout_width="0dp" android:onClick="showRanks" android:background="@drawable/rank_button" android:layout_weight="1" android:text="@string/empty" android:id="@+id/rank_button"></Button>
+    <FrameLayout 
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1.816">
+        <ImageView 
+            android:contentDescription="@string/logo_description"
+            android:src="@drawable/logo"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+        />
+        
+    </FrameLayout>
+    
+    <ImageView 
+        android:src="@drawable/redbanner"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:scaleType="fitXY"
+    />
+    <LinearLayout  
+        android:id="@+id/linearLayout1" 
+        android:layout_height="0dp"
+        android:layout_gravity="bottom"
+        android:orientation="horizontal" 
+        android:layout_width="match_parent"
+        android:layout_weight="1">
+        
+        <FrameLayout 
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="match_parent">
+        	
+        	<LinearLayout 
+            	android:orientation="vertical"
+            	android:layout_height="wrap_content"
+            	android:layout_width="wrap_content"
+            	android:layout_gravity="center">
+            	
+            	<Button 
+        	    	android:layout_margin="10dp" 
+        	    	android:layout_height="wrap_content" 
+        	    	android:layout_width="wrap_content" 
+        	    	android:onClick="showInfo" 
+        	    	android:background="@drawable/rank_button" 
+        	    	android:text="@string/empty" 
+        	    	android:id="@+id/rank_button" 
+        	    />
+            	
+            	<FrameLayout 
+                	android:layout_width="fill_parent"
+                	android:layout_height="wrap_content" >
+                	
+                	<TextView 
+                		android:gravity="center"
+                		android:text="@string/rank" 
+                		android:layout_width="fill_parent"
+                		android:layout_height="wrap_content" 
+                	/>
+                	
+            	</FrameLayout>
+            
+        	</LinearLayout>
+        	
+        </FrameLayout>
+        	
+        <FrameLayout 
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="match_parent">
+        	
+        	<LinearLayout 
+            	android:orientation="vertical"
+            	android:layout_height="wrap_content"
+            	android:layout_width="wrap_content"
+            	android:layout_gravity="center">
+            	
+            	<Button 
+        	    	android:layout_margin="10dp" 
+        	    	android:layout_height="wrap_content" 
+        	    	android:layout_width="wrap_content" 
+        	    	android:onClick="showInfo" 
+        	    	android:background="@drawable/join_button" 
+        	    	android:text="@string/empty" 
+        	    	android:id="@+id/join_button" 
+        	    />
+            	
+            	<FrameLayout 
+                	android:layout_width="fill_parent"
+                	android:layout_height="wrap_content" >
+                	
+                	<TextView 
+                		android:gravity="center"
+                		android:text="@string/play" 
+                		android:layout_width="fill_parent"
+                		android:layout_height="wrap_content" 
+                	/>
+                	
+            	</FrameLayout>
+            
+        	</LinearLayout>
+        	
+        </FrameLayout>
+        <FrameLayout 
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="match_parent">
+        	
+        	<LinearLayout 
+            	android:orientation="vertical"
+            	android:layout_height="wrap_content"
+            	android:layout_width="wrap_content"
+            	android:layout_gravity="center">
+            	
+            	<Button 
+        	    	android:layout_margin="10dp" 
+        	    	android:layout_height="wrap_content" 
+        	    	android:layout_width="wrap_content" 
+        	    	android:onClick="showInfo" 
+        	    	android:background="@drawable/info_button" 
+        	    	android:text="@string/empty" 
+        	    	android:id="@+id/info_button" 
+        	    />
+            	
+            	<FrameLayout 
+                	android:layout_width="fill_parent"
+                	android:layout_height="wrap_content" >
+                	
+                	<TextView 
+                		android:gravity="center"
+                		android:text="@string/info" 
+                		android:layout_width="fill_parent"
+                		android:layout_height="wrap_content" 
+                	/>
+                	
+            	</FrameLayout>
+            
+        	</LinearLayout>
+        	
+        </FrameLayout>
     </LinearLayout>
 </LinearLayout>

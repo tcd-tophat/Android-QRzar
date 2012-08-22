@@ -7,12 +7,13 @@
     <string name="welcome">Welcome to QRzar</string>
     <string name="nofacebook">&quot;Don't have Facebook?&quot;</string>
     <string name="rank">Rank</string>
-    <string name="join">Join</string>
+    <string name="play">Play</string>
     <string name="info">Info</string>
     <string name="empty"></string>
     <string name="connection_status">Connection Status</string>
     <string name="game_id">Game ID</string>
     <string name="player_id">Player ID</string>
     <string name="team">Team</string>
+    <string name="logo_description">Logo</string>
 
 </resources>
