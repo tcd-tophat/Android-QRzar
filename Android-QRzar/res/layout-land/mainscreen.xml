@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/blue_gradient_background" 
+    android:orientation="horizontal" >
+    <FrameLayout 
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_weight="1">
+        <ImageView 
+            android:contentDescription="@string/logo_description"
+            android:src="@drawable/logo"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+        />
+        
+    </FrameLayout>
+    
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:layout_marginRight="20dp"
+        android:scaleType="fitXY"
+        android:src="@drawable/redbannerhoriz" />
+    
+    <LinearLayout  
+        android:baselineAligned="false"
+        android:id="@+id/linearLayout1" 
+        android:layout_height="match_parent"
+        android:layout_gravity="bottom"
+        android:orientation="vertical" 
+        android:layout_width="wrap_content"
+        android:layout_marginRight="20dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginBottom="10dp">
+        
+        <FrameLayout 
+            android:layout_width="match_parent"
+            android:layout_weight="1"
+            android:layout_height="0dp">
+        	
+            	<Button 
+        	    	android:layout_height="wrap_content" 
+        	    	android:layout_width="wrap_content" 
+        	    	android:onClick="showRanks" 
+        	    	android:background="@drawable/rank_button" 
+        	    	android:text="@string/empty" 
+        	    	android:id="@+id/rank_button" 
+        	    	android:layout_gravity="center"
+        	    />
+            	
+        	
+        </FrameLayout>
+        	
+        <FrameLayout 
+            android:layout_width="match_parent"
+            android:layout_weight="1.4"
+            android:layout_height="0dp">
+        	
+        	   
+            	<Button 
+        	    	android:layout_height="wrap_content" 
+        	    	android:layout_width="wrap_content" 
+        	    	android:onClick="joinGame" 
+        	    	android:background="@drawable/join_button" 
+        	    	android:text="@string/empty" 
+        	    	android:id="@+id/join_button" 
+        	    	android:layout_gravity="center"
+        	    />
+            	
+        	
+        </FrameLayout>
+        <FrameLayout 
+            android:layout_width="match_parent"
+            android:layout_weight="1"
+            android:layout_height="0dp">
+        	
+            	<Button 
+        	    	android:layout_height="wrap_content" 
+        	    	android:layout_width="wrap_content" 
+        	    	android:onClick="showInfo" 
+        	    	android:background="@drawable/info_button" 
+        	    	android:text="@string/empty" 
+        	    	android:id="@+id/info_button"
+        	    	android:layout_gravity="center" 
+        	    />
+        	
+        </FrameLayout>
+    </LinearLayout>
+</LinearLayout>
