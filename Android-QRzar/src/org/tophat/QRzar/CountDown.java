@@ -5,7 +5,7 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.widget.TextView;
 
-public class PlayGame extends Activity{
+public class CountDown extends Activity{
 
     /* Called when the app is first started. */
     @Override
